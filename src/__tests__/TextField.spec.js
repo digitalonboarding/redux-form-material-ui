@@ -21,7 +21,7 @@ describe('TextField', () => {
           value: 'Foo'
         }
       }).render()
-    ).toEqualJSX(<TextField name="myText" value="Foo" />)
+    ).toEqualJSX(<TextField ref={function noRefCheck() {}} name="myText" value="Foo" />)
   })
 
   it('renders a TextField with no error when not touched', () => {
@@ -35,7 +35,7 @@ describe('TextField', () => {
           error: 'FooError'
         }
       }).render()
-    ).toEqualJSX(<TextField name="myText" value="Foo" />)
+    ).toEqualJSX(<TextField ref={function noRefCheck() {}} name="myText" value="Foo" />)
   })
 
   it('renders a TextField with an error', () => {
@@ -51,7 +51,7 @@ describe('TextField', () => {
         }
       }).render()
     ).toEqualJSX(
-      <TextField name="myText" value="Foo" error helperText="FooError" />
+      <TextField ref={function noRefCheck() {}} name="myText" value="Foo" error helperText="FooError" />
     )
   })
 
@@ -66,7 +66,7 @@ describe('TextField', () => {
           warning: 'FooWarning'
         }
       }).render()
-    ).toEqualJSX(<TextField name="myText" value="Foo" />)
+    ).toEqualJSX(<TextField ref={function noRefCheck() {}} name="myText" value="Foo" />)
   })
 
   it('renders a TextField with an warning', () => {
@@ -82,7 +82,7 @@ describe('TextField', () => {
         }
       }).render()
     ).toEqualJSX(
-      <TextField name="myText" value="Foo" error helperText="FooWarning" />
+      <TextField ref={function noRefCheck() {}} name="myText" value="Foo" error helperText="FooWarning" />
     )
   })
 
@@ -100,7 +100,7 @@ describe('TextField', () => {
         }
       }).render()
     ).toEqualJSX(
-      <TextField name="myText" value="" error helperText="FooWarning" />
+      <TextField ref={function noRefCheck() {}} name="myText" value="" error helperText="FooWarning" />
     )
   })
 })
